@@ -1,61 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="description" content="Biniam Bekele is a software developer who lives in Toronto, Ontario, Canada">
-<meta name="keywords" content="biniam bekele, ben bekele, software developer toronto, toronto, canada">
-<title>Biniam Bekele.com</title>
-<style>
-A,
-A:hover {
-	color: inherit;
-	font-weight: bold;
-}
-BODY {
-	background: #6D6E71 url(bg.png) repeat-x;
-}
-DIV {
-	background-color: #003366;
-}
-I {
-	font-style: normal;
-	text-decoration: line-through;
-}
-PRE {
-	background-color: #000;
-	border: 5px solid #aaa;
-	color: #33FF33;
-	font-family: monospace;
-	font-size: 130%;
-	line-height: 130%;
-	margin: 80px auto 0 auto;
-	max-width: 50em;
-	opacity: 0.7;
-	padding: 5px;
-	white-space: pre;
-	word-wrap: break-word;
-}
-</style>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Biniam Bekele is a software developer who lives in Toronto, Ontario, Canada">
+    <meta name="keywords" content="biniam bekele, ben bekele, software developer toronto">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biniam Bekele</title>
+    <style>
+        body {
+            color: #eee;
+            display: flex;
+            flex-direction: column-reverse;
+            font-family: Geomanist, Helvetica, sans-serif;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.8888;
+            margin: 0;
+        }
+
+        a:active,
+        a:hover,
+        a:link,
+        a:visited {
+            color: lightblue;
+        }
+
+        .play,
+        .main {
+            flex: 1;
+            padding: 3em;
+        }
+
+        .play {
+            background-color: #dddfe1;
+            color: #333;
+        }
+
+        .play div {
+            text-align: center;
+        }
+
+        .play button {
+            font-size: 1.1em;
+            padding: 0.6em 1em 0.5em 1em;
+        }
+
+        .play input,
+        .play textarea {
+            box-sizing: border-box;
+            max-width: 600px;
+            padding: 0.6em 1em 0.5em 1em;
+            width: 100%;
+        }
+        .play textarea {
+            height: 15em;
+        }
+
+        .main {
+            background-color: #333;
+        }
+
+        .main p {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .intro {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .intro a {
+            color: inherit;
+        }
+
+        .picture {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+            padding: 1em;
+        }
+
+        .picture iframe,
+        .picture img {
+            display: block;
+            flex: 1;
+            max-height: 12em;
+            max-width: 100%;
+            min-height: 5em;
+            object-fit: contain;
+        }
+
+        footer {
+            background-color: #222;
+            margin-top: 2em;
+            padding-bottom: 1em;
+        }
+
+        footer a {
+            display: block;
+            line-height: 1.4444;
+            padding: 0 1em;
+        }
+
+        footer header {
+            background: #333;
+            padding: 0.5em 1em 1.5em 1em;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 100% 70%, 60% 70%, 50% 100%, 40% 70%, 0 70%);
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                flex-direction: row;
+            }
+
+            .play div {
+                position: sticky;
+                text-align: center;
+                top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<pre>-!- Irssi: Connecting to biniambekele.com [127.0.0.1] port 6697
--!- Welcome to the BINIAM BEKELE Internet Search Disambiguation Network
--!-    ___  _      _              ___      __       __
--!-   / _ )(_)__  (_)__ ___ _    / _ )___ / /_____ / /__
--!-  / _  / / _ \/ / _ `/  ' \  / _  / -_)  '_/ -_) / -_)
--!- /____/_/_//_/_/\_,_/_/_/_/ /____/\__/_/\_\\__/_/\__/
--!-
--!- *n.b.* This is <i>not</i> the <i>droid</i> "biniam bekele" that you're looking for.
--!-
--!- [~biniam at &lt;This Domain Name&gt;]
--!-  fullname   : biniam bekele
--!-  location   : [Toronto, ON]
--!-  occupation : Software Developer
--!-  facebook   : <a href="https://www.facebook.com/biniam" title="Facebook">facebook.com/biniam</a>
--!-  google+    : <a href="https://google.com/+BiniamBekele" title="Google+">google.com/+BiniamBekele</a>
--!-  linkedin   : <a href="https://www.linkedin.com/in/biniambekele" title="LinkedIn">linkedin.com/in/biniambekele</a>
--!-  twitter    : <a href="https://twitter.com/biniambekele" title="Twitter">twitter.com/biniambekele</a>
--!- End of WHOIS
-<div>[20:56] [biniam(+Zi)] [1:biniambekele (change with ^X)</div>[(status)]</pre>
+<aside class="play">
+    <div>
+        <p>
+            <input id="email" name="email" placeholder="hi@example.com"/>
+        </p>
+        <p>
+            <textarea name="comment"></textarea>
+        </p>
+        <p>
+            <button>Send</button>
+        </p>
+    </div>
+</aside>
+<main class="main">
+    <header class="intro">Hi, my name is Biniam (aka <a href="https://github.com/andornaut" title="Github">andornaut</a>
+        ). Here's a little bit about me:
+    </header>
+    <p>
+        I live in Toronto, Canada with my delightful daughter, wonderful wife, cuddly cat, and dashing dog.
+        <span class="picture"><img src="./dog.jpg"/></span></p>
+    <p>
+        I work as a Software Developer, which was probably a foregone conclusion ever since my mom bought me my first
+        computer: an IBM PS/2 Model 25 286.<a
+            href="https://en.wikipedia.org/wiki/IBM_Personal_System/2#Models" class="picture"><img
+            src="./ibm-ps2.png"/></a></p>
+
+    <p>Pretty soon I was writing simple games in QBasic and exploring Bulletin Board Systems and then, of course, I fell
+        in love with "World Wide Web". My first big project for the web was a video game fan-site named Jedi Nights.
+        Being part of the community that arose from the site was so much fun!
+        <a href="http://jedinights.com" class="picture"><img src="./jedinights.jpg"/></a></p>
+
+    <p>After graduating from the University of Toronto, I worked happily as a freelance developer, but eventually took
+        jumped on an opportunity to help found a company, where I got to learn about Java Enterprise Edition, art asset
+        pipelines, and project planning!</p>
+
+    <p>After almost five years, I switched gears to build a content management and publishing
+        system for a marketing company. I'm happy to report that that product is still going strong to this day! Then
+        for something completely different, I decided to join an ISP where I worked on systems to manage network
+        switches, to power a bespoke IPTV solution, and to empower customers to manage their services.</p>
+
+    <p>Today, I work at <a href="https://www.points.com/">Points</a>, where I help to enhance and extend the <a
+            href="http://points.github.io/Loyalty-Commerce-Platform/">Loyalty Commerce Platform</a>.</p>
+
+    <p>In my spare time, I enjoy tinkering with <a href="https://smallformfactor.net/forum/">Small Form Factor
+        computers</a>, PF firewalls, IP Security Cams, HTPCs...<a href="https://en.wikipedia.org/wiki/Fsn_(file_manager)">"It's a UNIX system! I know this!"</a>
+    </p>
+
+    <p class="picture">
+        <iframe src="https://www.youtube.com/embed/dFUlAQZB9Ng" frameborder="0" allowfullscreen></iframe>
+    </p>
+
+    <footer>
+        <header>Elsewhere...</header>
+        <a href="https://www.facebook.com/biniam" title="Facebook">facebook.com/biniam</a>
+        <a href="https://github.com/andornaut" title="Github">github.com/andornaut</a>
+        <a href="https://google.com/+BiniamBekele" title="Google+">google.com/+BiniamBekele</a>
+        <a href="https://www.instagram.com/biniam.bekele/">instagram.com/biniam.bekele/</a>
+        <a href="https://www.linkedin.com/in/biniambekele" title="LinkedIn">linkedin.com/in/biniambekele</a>
+        <a href="https://twitter.com/biniambekele" title="Twitter">twitter.com/biniambekele</a>
+    </footer>
+</main>
 </body>
 </html>
