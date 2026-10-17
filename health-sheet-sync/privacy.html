@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Privacy Policy - Google Health Sheet Sync</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2em auto; padding: 0 1em; line-height: 1.5; }
+  h1, h2 { line-height: 1.2; }
+  h2 { margin-top: 2em; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p><strong>Effective date:</strong> 2026-05-31</p>
+
+<h2>Overview</h2>
+<p>Google Health Sheet Sync ("the app") is a personal Google Apps Script that synchronizes workout and bodyweight entries from a Google Sheets spreadsheet to the user's own Google Health account. This policy describes what the app does with user data.</p>
+
+<h2>Data accessed</h2>
+<p>The app reads cells from a Google Sheets spreadsheet that the authorizing user owns or has been granted access to, and writes corresponding exercise and bodyweight data points to that same user's Google Health account via the Google Health API.</p>
+
+<h2>Data transmission</h2>
+<p>Data flows directly from Google Sheets to Google Health using Google's official APIs. The app does not transmit data to any server, endpoint, or third party operated by anyone other than Google.</p>
+
+<h2>Data storage</h2>
+<p>The app does not maintain its own database. It stores only OAuth tokens and configuration values in Google Apps Script's PropertiesService, scoped to the authorizing user, used solely to call the Google Health API on the user's behalf. It also writes a small set of synchronization metadata columns (timestamps and Google Health data point identifiers) back to the same spreadsheet the user is syncing from.</p>
+
+<h2>Data sharing</h2>
+<p>The app does not share any user data with third parties.</p>
+
+<h2>Data retention and deletion</h2>
+<p>The user can revoke the app's access at any time via <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. Revoking access immediately stops the app from being able to read or write data on the user's behalf. Stored OAuth tokens become unusable and may be cleared by re-authorizing or by the user manually deleting the bound Apps Script project.</p>
+
+<h2>Scopes requested</h2>
+<ul>
+  <li><code>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly</code> and <code>.writeonly</code> - to list, create, update, and delete exercise data points in the user's Google Health account.</li>
+  <li><code>https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly</code> and <code>.writeonly</code> - to list, create, update, and delete bodyweight data points in the user's Google Health account.</li>
+  <li>Standard Google Apps Script scopes for reading and writing the bound spreadsheet, making external requests to the Health API, and rendering the in-sheet menu.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>For questions about this policy, contact <a href="mailto:biniambekele@gmail.com">biniambekele@gmail.com</a>.</p>
+</body>
+</html>
