@@ -26,8 +26,8 @@
     "serve": "^11.2.0"
   },
   "scripts": {
-    "format": "prettier-eslint --write \"{css/**/,./}*.{css,js,json,jsx,md}\"",
+    "format": "prettier-eslint --write \"{public/css/**/,./}*.{css,js,json,jsx,md}\"",
     "precommit": "lint-staged",
-    "server": "serve -l tcp://localhost:8080"
+    "server": "serve -l tcp://localhost:8080 public"
   }
 }
